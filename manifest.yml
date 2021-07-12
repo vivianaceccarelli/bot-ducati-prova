@@ -1,0 +1,4 @@
+---
+applications:
+ - name: bot-duc-prova
+   memory: 256M

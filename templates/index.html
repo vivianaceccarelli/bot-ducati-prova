@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ducati segnalazione flotte con watson</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/css/favicon.ico">
+    <link rel="stylesheet" href="static/carbon-components/css/carbon-components.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- <link rel="stylesheet" href="static/css/chat.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm ChatWindow">
+
+                    <div class="ChatItem ChatItem--customer">
+                        <div class="ChatItem-meta">
+                            <div class="ChatItem-avatar">
+                                <img class="ChatItem-avatarImage" src="static/watson.png">
+                            </div>
+                        </div>
+                        <div class="ChatItem-chatContent">
+                            <div class="ChatItem-chatText"><label class="bx--label bx--skeleton"></label></div>
+                            <div class="ChatItem-timeStamp"><strong>Watson Chatbot</strong></div>
+                        </div>
+                    </div>
+                    <!-- <div class="bx--col-sm-1">
+                        <div class="bx--form-item inputBox">
+                            <input id="text-input-3" type="text" class="bx--text-input" placeholder="Type your message here ...">
+                            <button class="bx--btn bx--btn--secondary bx--btn--sm bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--bottom bx--tooltip--align-center ">
+                            <span class="bx--assistive-text">Submit</span>
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
+                                xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16"
+                                viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path>
+                            </svg>
+                        </button>
+                        </div>
+                    </div> -->
+
+                    <!--<div class="ChatWindow2 ChatInput">
+                        <form id="myform">
+                            <div class="ChatInput-input" id="ChatInput-input" contenteditable="true" placeholder="Type your message here..."></div>
+                            <input type="submit">
+                        </form>
+                        <button class="bx--btn bx--btn--secondary bx--btn--sm bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--bottom bx--tooltip--align-center " type="submit" style="position: absolute; right: 0;">
+                            <span class="bx--assistive-text">Submit</span>
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
+                                xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16"
+                                viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path>
+                            </svg>
+                        </button>-->
+
+                    <div class="ChatWindow2 ChatInput">
+                        <form id="myform">
+                            <div class="ChatInput-input" id="ChatInput-input" contenteditable="true" placeholder="Type your message here..."></div>
+                            <input type="submit">
+                            <div class="example-button-wrapper">
+                                <button class="bx--tag bx--tag--red"  type="submit" style="position: absolute; right: 0;">
+                                    <strong class= "bx--tag__label" style="color:#ffffff">Invio</strong>
+                                    <!--<svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
+                                        xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"></path>
+                                    </svg>-->
+                                </button>
+                        </form>
+                    
+                        <button class="btn btn-primary" id="submitQuery" onclick="watson()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: none;">
+            <button class="bx--btn bx--btn--primary bx--btn--field" type="button" id="bringUpForm" data-modal-target="#modal-pyu0ribosn">
+                bringup modal
+                <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
+                    xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16"
+                    aria-hidden="true">
+                    <path
+                        d="M7.926 3.38L1.002 9.72V12h2.304l6.926-6.316L7.926 3.38zm.738-.675l2.308 2.304 1.451-1.324-2.308-2.309-1.451 1.329zM.002 9.28L9.439.639a1 1 0 0 1 1.383.03l2.309 2.309a1 1 0 0 1-.034 1.446L3.694 13H.002V9.28zM0 16.013v-1h16v1z">
+                    </path>
+                </svg>
+            </button>
+
+
+        
+        </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.0/dist/axios.min.js"></script>
+<script src=" https://unpkg.com/@pusher/chatkit-client"></script>
+<script src="static/javascript/chat.js"></script>
+<script src="static/carbon-components/scripts/carbon-components.min.js"></script>
+
+
+</html>
